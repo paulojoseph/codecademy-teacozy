@@ -1,0 +1,76 @@
+/* general styles */
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9;
+}
+
+/* header styles */
+
+header {
+  height: 69px;
+  border-bottom: 1px solid seashell;
+  position: fixed;
+  background-color: black;
+  z-index: 10;
+  width: 100%;
+  display: inline;
+}
+
+header a {
+  float: left;
+  text-decoration: underline;
+  color: seashell;
+}
+
+header img {
+  margin: 9.5px 10px;
+  vertical-align: middle;
+}
+
+nav {
+  float: right;
+}
+
+nav a {
+  padding: 20px;
+}
+
+/* main styles */
+
+main {
+  position: relative;
+  top: 69px;
+  justify-items: center;
+  align-items: center;
+}
+
+.hero {
+  height: 700px;
+  width: 1200px;
+  border: 1px solid red;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  /* transform: translate(-25%, 0); */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .section-title {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+  justify-items: center;
+}
+
+h1, h2, h4 {
+  padding: 10px 0;
+  margin: 0px;
+}
