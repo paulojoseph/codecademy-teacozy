@@ -1,4 +1,12 @@
+/* Just and project to practice some knowledge in css acquired in codecademy
+Code still need to improve in responsive skills */
+
 /* general styles */
+
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -7,7 +15,6 @@ body {
   color: seashell;
   background-color: black;
   opacity: 0.9;
-  /* width: 100%; */
 }
 
 h1, h2, h4 {
@@ -60,11 +67,9 @@ main {
 .hero {
   height: 700px;
   width: 1200px;
-  border: 1px solid red;
   position: relative;
   text-align: center;
   justify-content: center;
-  /* transform: translate(-25%, 0); */
   margin-left: auto;
   margin-right: auto;
 }
@@ -78,29 +83,25 @@ main {
   justify-items: center;
 }
 
-/* Tea's section */
+/* tea's section */
 
 .teas-container {
-  /* height: 700px; */
   width: 1000px;
-  border: 1px solid red;
   position: relative;
   text-align: center;
   justify-content: center;
-  /* transform: translate(-25%, 0); */
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .teas-title {
-  border: 1px solid red;
+  margin-bottom: 10px;
 }
 
 .images-container {
   display: inline-flex;
   flex-wrap: wrap;
-  border: 1px solid red;
   justify-content: space-around;
   margin-bottom: 50px;
 }
@@ -108,47 +109,83 @@ main {
 .images-container figure {
   margin: 0;
   padding: 0;
-  border: 1px solid red;
 }
 
 figure img {
   height: 200px;
   width: 300px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   padding: 0;
 }
 
 figcaption h4 {
-  margin-top: 0;
+  margin: 10px auto 20px auto;
   padding: 0;
   vertical-align: text-top;
 }
 
-/* Locations section */
+/* locations section */
 
-.locations-container  {
+.locations-section  {
   background-image: url("static/images/img-locations-background.jpg");
   height: 500px;
   width: 1200px;
-  border: 1px solid red;
   position: relative;
   text-align: center;
   justify-content: center;
-  /* transform: translate(-25%, 0); */
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
 
-footer {
+.locations-container {
+  margin: 0;
+  position: absolute;
+  top: 43.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.locations-title {
+  margin-bottom: 5px;
+  margin: 0;
+}
+
+.address-container {
+  display: inline-flex;
+}
+
+.address {
+  width: 300px;
+  background-color: black;
+  margin: 0 20px;
+}
+
+.address h4 {
+  margin: 15px 5px;
+}
+
+/* footer section */
+
+.contact-container {
   height: 200px;
-  width: 1200px;
-  border: 1px solid red;
+  width: 100%;
   position: relative;
   text-align: center;
   justify-content: center;
-  /* transform: translate(-25%, 0); */
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.copy h5 {
+  margin: 0 0 30px 20px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -69px;
+  visibility: hidden;
 }
