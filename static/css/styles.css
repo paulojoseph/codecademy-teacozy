@@ -1,95 +1,115 @@
-/* general styles */
+/* GLOBAL */
 
 html {
     overflow-y: scroll;
     scroll-behavior: smooth;
+    font-family: Helvetica, sans-serif;
+    color: seashell;
+    background-color: black;
+    font-size: 22px;
+    opacity: 0.9;
+    text-align: center;
 }
 
 body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
   margin: 0;
-  font-family: Helvetica, sans-serif;
-  font-size: 22px;
-  color: seashell;
-  background-color: black;
-  opacity: 0.9;
 }
 
-h1, h2, h4 {
+h1, h2, h3, h4, h5 {
   padding: 10px 0;
   margin: 0;
 }
 
-/* header styles */
+/* HEADER */
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 69px;
   border-bottom: 1px solid seashell;
   position: fixed;
   background-color: black;
   z-index: 10;
   width: 100%;
-  display: inline;
+  padding: 0;
 }
 
-header a {
-  float: left;
+header img {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+header nav ul li {
+  display: inline-flex;
+  padding: 10px;
+  position: relative;
+}
+
+header nav ul li a {
   text-decoration: underline;
   color: seashell;
 }
 
-header img {
-  margin: 9.5px 10px;
-  vertical-align: middle;
+#menu {
+  display: none;
+  position: absolute;
 }
 
-nav {
-  float: right;
+.hover-nav {
+  text-decoration: underline;
+  color: seashell;
 }
 
-nav a {
-  padding: 20px;
+@media only screen and (max-width: 642px) {
+  #menu {
+      display: inline;
+      position: relative;
+  }
+  
+  .options {
+      display: none;
+      position: relative;
+  }
 }
 
-/* main styles */
+/* MAIN */
 
 main {
   position: relative;
   top: 69px;
-  justify-items: center;
-  align-items: center;
 }
 
-/* hero section */
+/* HERO */
 
 .hero {
   height: 700px;
-  width: 1200px;
-  position: relative;
-  text-align: center;
+  max-width: 1200px;
+  display: flex;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  align-content: center;
+  align-items: center;
+  background: url("../images/img-mission-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
 }
 
-.hero .section-title {
-  background-color: black;
-  position: absolute;
+.hero-title {
   width: 100%;
-  top: 50%;
-  transform: translate(0, -50%);
-  justify-items: center;
+  background-color: black;
+  align-items: center;
 }
 
-/* tea's section */
+/* TEA'S */
 
 .teas-container {
-  width: 1000px;
-  position: relative;
-  text-align: center;
-  justify-content: center;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1000px;
+  margin: 50px auto;
 }
 
 .teas-title {
@@ -97,50 +117,42 @@ main {
 }
 
 .images-container {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 50px;
 }
 
-.images-container figure {
-  margin: 0;
+figure {
   padding: 0;
+  margin: 0;
 }
 
 figure img {
-  height: 200px;
   width: 300px;
-  /* margin-bottom: 10px; */
+  height: 200px;
   padding: 0;
 }
 
 figcaption h4 {
   margin: 10px auto 20px auto;
   padding: 0;
-  vertical-align: text-top;
 }
 
-/* locations section */
+
+/* LOCATIONS */
 
 .locations-section  {
-  background-image: url("../images/img-locations-background.jpg");
-  height: 500px;
-  width: 1200px;
-  position: relative;
+  display: flex;
+  min-height: 500px;
+  max-width: 1200px;
+  margin: 50px auto;
   text-align: center;
-  justify-content: center;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.locations-container {
-  margin: 0;
-  position: absolute;
-  top: 43.5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-image: url("../images/img-locations-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: space-around;
+  align-items: center;
+  vertical-align: middle;
 }
 
 .locations-title {
@@ -149,20 +161,25 @@ figcaption h4 {
 }
 
 .address-container {
-  display: inline-flex;
+  max-width: 1200px;
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .address {
-  width: 300px;
+  min-width: 300px;
   background-color: black;
-  margin: 0 20px;
+  margin: auto 20px;
+  opacity: 1;
 }
 
 .address h4 {
   margin: 15px 5px;
 }
 
-/* footer section */
+/* FOOTER */
 
 .contact-container {
   height: 200px;
